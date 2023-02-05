@@ -26,19 +26,20 @@ let secondCard = ""
 
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll(".disabled-card")
-  const reset = document.querySelector('.restart')
+  const restartPopup = document.querySelector(".restart-popup")
   const resetButton = document.querySelector('.reset-button')
-  const timer2 = document.querySelector('.timer2') 
+  const timerPopUp = document.querySelector(".timer-popup")
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop)
     alert(
       `Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`
     ) 
-    reset.style.display = 'block'
+    restartPopup.style.display = "block"
     resetButton.onclick = () => {
       document.location.reload(true)
     }
+    timerPopUp.innerHTML = `${timer.innerHTML}`
   }
 }
 
