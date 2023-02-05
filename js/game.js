@@ -32,9 +32,9 @@ const checkEndGame = () => {
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop)
-    alert(
+    /* alert(
       `Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`
-    ) 
+    ) */
     restartPopup.style.display = "block"
     resetButton.onclick = () => {
       document.location.reload(true)
